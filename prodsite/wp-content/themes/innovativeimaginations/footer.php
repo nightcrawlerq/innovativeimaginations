@@ -120,29 +120,7 @@
 	<!-- JavaScript-->
 		<!-- External-->
 		<!-- jQuery 1.10.1--> 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="<?php bloginfo('template_url'); ?>/external/jquery/jquery-1.10.1.min.js"><\/script>')</script>
-		<!-- Bootstrap 3--> 
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-        <!-- Mobile menu -->
-	    <script src="<?php bloginfo('template_url'); ?>/external/z-nav/jquery.mobile.menu.js"></script>
-	    <!-- Touch slider - Swiper -->
-	    <script src="<?php bloginfo('template_url'); ?>/external/swiper/idangerous.swiper.js"></script>		
-	    <!-- Twitter feed -->
-	    <script src="<?php bloginfo('template_url'); ?>/external/twitterfeed/twitterfeed.js"></script>
-	    <!-- Scroll to piugin -->
-	    <script src="<?php bloginfo('template_url'); ?>/external/scrollto/jquery.scrollTo.min.js"></script>
-	    <!-- Livicons -->
-		<script src="<?php bloginfo('template_url'); ?>/external/livicons/livicons-1.3.min.js"></script>
-		<script src="<?php bloginfo('template_url'); ?>/external/livicons/raphael-min.js"></script>
-	     <!-- Event that will trigger when the element is scrolled in to the viewport.--> 
-        <script src="<?php bloginfo('template_url'); ?>/external/inview/jquery.inview.js"></script>
-        
-		<!-- Custom -->
-        <script src="<?php bloginfo('template_url'); ?>/js/custom.js"></script>
-
-        
-
 		<script>
 			$(document).ready(function() { 
 	           featureSlider();
