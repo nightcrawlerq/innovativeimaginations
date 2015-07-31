@@ -1,63 +1,6 @@
 <!doctype html>
 <html lang="en-us">
 <head>
-	<!-- Basic Page Needs -->
-		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-        <meta charset="utf-8"> 
-        <title>Allec - Homepage</title>
-        <meta name="description" content="A Template by Congruity Hub team">
-        <meta name="keywords" content="HTML, CSS, JavaScript">
-        <meta name="author" content="Congruity Hub team">
-
-    <!-- Mobile Specific Metas-->
-    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta content="telephone=no" name="format-detection">
-    
-    <!-- Fonts -->
-    	<!-- Open Sans -->
-    	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,600,700italic,400,700,800italic' rel='stylesheet' type='text/css'>
-    	<!-- VarelaRound -->
-    	<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-    	<!-- Icon Font - Font Awesome -->
-    	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
-    <!-- Stylesheets -->
-		<!-- External -->
-    	<!-- Mobile menu -->	
-    	<link href="<?php echo get_stylesheet_directory_uri(); ?>/
-external/z-nav/z-nav.css"  rel="stylesheet">
-		
-    	<!-- Touch slider - Swiper -->
-    	<link href="<?php echo get_stylesheet_directory_uri(); ?>/
-external/swiper/idangerous.swiper.css" rel="stylesheet" />
-
-        <!-- Custom -->
-      <link href="<?php echo get_stylesheet_directory_uri(); ?>/
-css/style.css?v=1" rel="stylesheet" />
-		<!-- *** Favicons *** -->
-			<!--[if IE]><link rel="icon"  href="favicons/favicon_16x16.ico" /><![endif]-->
-			<link rel="icon" href="favicons/favicon_96x96.png">
-			<!-- Specifying a Webpage Icon for Web Clip -->
-			<link rel="apple-touch-icon-precomposed" href="favicons/favicon_57x57.png">
-			<link rel="apple-touch-icon-precomposed" sizes="72x72"  href="favicons/favicon_72x72.png">
-			<link rel="apple-touch-icon-precomposed" sizes="114x114"  href="favicons/favicon_114x114.png">
-			<link rel="apple-touch-icon-precomposed" sizes="144x144"  href="favicons/favicon_144x144.png">
-			<link rel="apple-touch-icon-precomposed" sizes="180x180"  href="favicons/favicon_180x180.png">
-		
-		<!-- Basic JavaScript-->
-		<!-- Modernizr -->
-		<script src="<?php bloginfo('template_url'); ?>/
-external/modernizr/modernizr.custom.js"></script>
-    
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --> 
-    <!--[if lt IE 9]> 
-    	<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script> 
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>		
-    <![endif]-->
-
-    <!--[if lte IE 9]>
-        <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/ie9.css?v=1" rel="stylesheet" />
-    <![endif]-->
     <?php wp_head(); ?>
 </head>
 
