@@ -15,27 +15,26 @@
 					<h3 class="heading-info">Latest from blog:</h3>
 
 					<div class="row">
-						<div class="col-xs-6 col-sm-12 one-column">
-							<article class="post post--latest">
-								<h3 class="not-visible">Latest post</h3>
-								<a class="post__images" href="single-post.html">
-									<img src="<?php bloginfo('template_url'); ?>/images/blog/latest/1.jpg" alt="">
-								</a>
-								<a class="post__text" href="single-post.html">Mauris orci purus, ultrices dapibus justo non, eleifend consequat lorem. </a>
-								<time datetime="2015-07-17" class="post__date">July 17, 2015</time>
-							</article>
-						</div>
-					
-						<div class="col-xs-6 col-sm-12 one-column">
-							<article class="post post--latest">
-								<h3 class="not-visible">Latest post</h3>
-								<a class="post__images" href="single-post.html">
-									<img src="<?php bloginfo('template_url'); ?>/images/blog/latest/2.jpg" alt="">
-								</a>
-								<a class="post__text" href="single-post.html">Pellentesque et magna malesuada, scelerisque elit ac, convallis lacus. </a>
-								<time datetime="2015-07-16" class="post__date">July 16, 2015</time>
-							</article>
-						</div>
+					<?php $query = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 2, 'orderby' => 'menu_order','order' => 'DESC') ); ?>
+						<?php if($query->have_posts()) : ?>
+							<?php while ($query->have_posts()) : $query->the_post(); ?>
+								<div class="col-xs-6 col-sm-12 one-column">
+									<article class="post post--latest">
+										<h3 class="not-visible"><?php the_title(); ?></h3>
+										<a class="post__images" href="<?php the_permalink(); ?>">
+											<?php the_post_thumbnail('circle-image'); ?>
+										</a>
+										<a class="post__text" href="<?php the_permalink(); ?>"><?php echo substr(get_the_excerpt(), 0, 75); ?>
+</a>
+										<time datetime="2015-07-17" class="post__date"><?php the_date('F j, Y'); ?></time>
+									</article>
+								</div>
+							<?php endwhile; ?>
+						<?php else : ?>
+							<?php wp_reset_query(); ?>
+							<h1>No Post Found</h1>
+							<?php get_search_form( ); ?>
+						<?php endif; ?>
 					</div>
 				</div>
 				<!-- end latest post -->
@@ -117,6 +116,9 @@
         	<div class="preloader"></div>
     </div>
 
+
+<?php wp_footer(); ?>
+<?php if(is_front_page()){ ?>
 	<!-- JavaScript-->
 		<!-- External-->
 		<!-- jQuery 1.10.1--> 
@@ -169,6 +171,6 @@
                
 			});
 		</script>
-<?php wp_footer(); ?>
+<?php } ?>
 </body>
 </html>

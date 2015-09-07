@@ -103,7 +103,7 @@
             //add_action( 'admin_enqueue_scripts', 'Text Domain_post_listing_column_resize' );       
             
             //Set Image Sizes
-            //add_action( 'init', 'text_domain_add_image_sizes' );
+            add_action( 'init', 'ini_add_image_sizes' );
             
             /* Filters hooks go here. */
 
@@ -219,7 +219,7 @@
     //Set Image Sizes
     if (!function_exists('ini_add_image_sizes')) {
         function ini_add_image_sizes() {
-           //add_image_size('featured-image-name', width, height, true/false);
+           add_image_size('circle-image', 80, 80, false);
         }
     }
 
@@ -258,7 +258,7 @@
             wp_enqueue_script( 'modernizr' );
 
             wp_deregister_script( 'html5shiv' );
-            wp_register_script( 'html5shiv','http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js', false, '1.0');
+            wp_register_script( 'html5shiv','http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js', false, '1.0', true);
             wp_enqueue_script( 'html5shiv' );
              //Use the wp scripts constant if necesarry
              //global ;
@@ -282,43 +282,43 @@
 
 //Footer scripts
             wp_deregister_script( 'ajax' );
-            wp_register_script( 'ajax','http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js', true, '1.0');
+            wp_register_script( 'ajax','http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js', false, '1.0', true);
             wp_enqueue_script( 'ajax' );
     // Bootstrap 3
             wp_deregister_script( 'bootstrapmin' );
-            wp_register_script( 'bootstrapmin','https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js', true, '1.0');
+            wp_register_script( 'bootstrapmin','https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js', false, '1.0', true);
             wp_enqueue_script( 'bootstrapmin' );
 
     // Mobile menu 
             wp_deregister_script( 'jquerymobile' );
-            wp_register_script( 'jquerymobile',trailingslashit( THEME_URI ) .'external/z-nav/jquery.mobile.menu.js', true, '1.0');
+            wp_register_script( 'jquerymobile',trailingslashit( THEME_URI ) .'external/z-nav/jquery.mobile.menu.js', false, '1.0', true);
             wp_enqueue_script( 'jquerymobile' );
     // Touch slider - Swiper
             wp_deregister_script( 'idangerous' );
-            wp_register_script( 'idangerous',trailingslashit( THEME_URI ) .'external/swiper/idangerous.swiper.js', true, '1.0');
+            wp_register_script( 'idangerous',trailingslashit( THEME_URI ) .'external/swiper/idangerous.swiper.js', false, '1.0', true);
             wp_enqueue_script( 'idangerous' );
     // Twitter Feed
             wp_deregister_script( 'twitterfeed' );
-            wp_register_script( 'twitterfeed',trailingslashit( THEME_URI ) .'external/twitterfeed/twitterfeed.js', true, '1.0');
+            wp_register_script( 'twitterfeed',trailingslashit( THEME_URI ) .'external/twitterfeed/twitterfeed.js', false, '1.0', true);
             wp_enqueue_script( 'twitterfeed' );
     // jQuery Scroll
             wp_deregister_script( 'jqueryscroll' );
-            wp_register_script( 'jqueryscroll',trailingslashit( THEME_URI ) .'external/scrollto/jquery.scrollTo.min.js', true, '1.0');
+            wp_register_script( 'jqueryscroll',trailingslashit( THEME_URI ) .'external/scrollto/jquery.scrollTo.min.js', false, '1.0', true);
             wp_enqueue_script( 'jqueryscroll' );
     // Livicons
             wp_deregister_script( 'livicons' );
-            wp_register_script( 'livicons',trailingslashit( THEME_URI ) .'external/livicons/livicons-1.3.min.js', true, '1.0');
+            wp_register_script( 'livicons',trailingslashit( THEME_URI ) .'external/livicons/livicons-1.3.min.js', false, '1.0', true);
             wp_enqueue_script( 'livicons' );
             wp_deregister_script( 'livicons2' );
-            wp_register_script( 'livicons2',trailingslashit( THEME_URI ) .'external/livicons/raphael-min.js', true, '1.0');
+            wp_register_script( 'livicons2',trailingslashit( THEME_URI ) .'external/livicons/raphael-min.js', false, '1.0', true);
             wp_enqueue_script( 'livicons2' );
     //  Event that will trigger when the element is scrolled in to the viewport                  
             wp_deregister_script( 'inview' );
-            wp_register_script( 'inview',trailingslashit( THEME_URI ) .'external/inview/jquery.inview.js', true, '1.0');
+            wp_register_script( 'inview',trailingslashit( THEME_URI ) .'external/inview/jquery.inview.js', false, '1.0', true);
             wp_enqueue_script( 'inview' );
     //  Custom
             wp_deregister_script( 'custom' );
-            wp_register_script( 'custom',trailingslashit( THEME_URI ) .'js/custom.js', true, '1.0');
+            wp_register_script( 'custom',trailingslashit( THEME_URI ) .'js/custom.js', false, '1.0', true);
             wp_enqueue_script( 'custom' );
                             
                 

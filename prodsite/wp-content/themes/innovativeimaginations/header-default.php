@@ -9,41 +9,69 @@
 	<div class="wrapper" id="top">
 		<!-- Index file main container -->
 		<!-- Header section -->
-		<header class="header-placement">
-			<div class="content">
-
-				<div class="header-fixed header-down">
-					<div class="container waypoint" data-animate-down="header-up" data-animate-up="header-down">
-						<!--  Logo  -->
-						<a class="logo" href="<?php bloginfo('url'); ?>">
-						   	<!-- Remove comments to choose image and add comment to h1 -->
-						   	<!--<img src="<?php bloginfo('template_url'); ?>/images/logo-full.png" alt="">-->  
-						   	<svg class="logo__svg" width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-									<g>
-										<path class="logo__svg-path" d="m18.8,14c-1.2,-0.2 -2.3,0.1 -3.2,0.6c-0.8,0.5 -1.8,0.2 -2.4,-0.7c-0.4,-0.8 -0.2,-1.8 0.7,-2.3c1.4,-0.7 3,-1.2 4.7,-1.1c-0.2,-0.1 -0.4,-0.2 -0.6,-0.4c-0.8,-0.7 -1.8,-1.3 -3,-1.4c-2.6,-0.3 -5.1,1.5 -5.4,4s1.6,4.9 4.2,5.2c1.2,0.1 2.3,-0.1 3.2,-0.6c0.8,-0.5 1.8,-0.2 2.4,0.7c0.4,0.8 0.2,1.8 -0.7,2.3c-1.3,0.7 -3,1.2 -4.7,1.1c0.2,0.1 0.4,0.2 0.6,0.4c0.8,0.7 1.8,1.3 3,1.4c2.6,0.3 5.1,-1.5 5.4,-4c0.4,-2.4 -1.5,-4.8 -4.2,-5.2zm-2.8,-14c-8.8,0 -16,7.2 -16,16s7.2,16 16,16c8.8,0 16,-7.2 16,-16s-7.2,-16 -16,-16zm10.5,19.7c-0.6,4.5 -4.8,7.5 -9.4,7c-2,-0.3 -3.7,-1.2 -4.9,-2.4c-0.7,-0.7 -0.7,-1.8 0,-2.4c0.3,-0.3 0.7,-0.4 1,-0.5c-4.4,-0.6 -7.6,-4.7 -7.1,-9c0.6,-4.5 4.8,-7.5 9.3,-7c2,0.2 3.7,1.2 5,2.4c0.7,0.7 0.7,1.8 0,2.4c-0.3,0.3 -0.7,0.4 -1,0.5c4.5,0.6 7.7,4.6 7.1,9z" fill="#ffffff">
-									</g>
-								</svg>
-								<h1 class="logo__text">Allec</h1>     		 
+		<header class="header">
+			<div class="header-fixed">
+			<div class="header-line waypoint" data-animate-down="header-up" data-animate-up="header-down">
+				<div class="container">
+					<!-- Contact information about company -->
+					<address class="contact-info pull-left hidden-lower">
+						<a href="http://maps.google.com/?q=101 West Street, New York, NY 10014" class="contact-info__item" target="_blank">
+							<i class="fa fa-location-arrow"></i>
+							101 West Street, New York, NY 10014
 						</a>
-						<!-- End Logo -->
+						<a class="contact-info__item" href="tel://1-888-555-5555">
+							<i class="fa fa-mobile"></i>
+							+1-888-555-5555
+						</a>
+						<a class="contact-info__item" href="mailto:info@allec.com?subject=Email from website">
+							<i class="fa fa-envelope"></i>
+							info@allec.com
+						</a>
+					</address>
+					<!-- end contact information -->
 
-						<!-- Navigation section -->
-						<nav class="z-nav">
-					    	<!-- Toggle for menu mobile view -->
-					        <a href="#" class="z-nav__toggle">
-					        	<span class="menu-icon"></span>
-					        	<span class="menu-text">navigation</span>
-					        	<div class="menu-head"></div>
-					        </a>
+					<!-- Search field -->
+					<form class="search pull-right" id="search-form" name="search-form" method="get" action="#">
+		                <input class="search__field" name="search-request" type="search" placeholder="search" value="">
+		                <button class="search__btn" type="submit">
+				            <i class="fa fa-search"></i>
+				        </button>
+		            </form>
+					<!-- end search field -->
+				</div>  <!-- end container -->
+			</div>
+			
+			<div class="fixed-top header-down">
+			<div class="container">
+				<!--  Logo  -->
+				<a class="logo" href="<?php bloginfo('url'); ?>">
+				   	<!-- Remove comments to choose image and add comment to h1 -->
+				   	<!--<img src="images/logo-full.png" alt="">-->  
+				   	<svg class="logo__svg" width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+							<g>
+								<path class="logo__svg-path" d="m18.8,14c-1.2,-0.2 -2.3,0.1 -3.2,0.6c-0.8,0.5 -1.8,0.2 -2.4,-0.7c-0.4,-0.8 -0.2,-1.8 0.7,-2.3c1.4,-0.7 3,-1.2 4.7,-1.1c-0.2,-0.1 -0.4,-0.2 -0.6,-0.4c-0.8,-0.7 -1.8,-1.3 -3,-1.4c-2.6,-0.3 -5.1,1.5 -5.4,4s1.6,4.9 4.2,5.2c1.2,0.1 2.3,-0.1 3.2,-0.6c0.8,-0.5 1.8,-0.2 2.4,0.7c0.4,0.8 0.2,1.8 -0.7,2.3c-1.3,0.7 -3,1.2 -4.7,1.1c0.2,0.1 0.4,0.2 0.6,0.4c0.8,0.7 1.8,1.3 3,1.4c2.6,0.3 5.1,-1.5 5.4,-4c0.4,-2.4 -1.5,-4.8 -4.2,-5.2zm-2.8,-14c-8.8,0 -16,7.2 -16,16s7.2,16 16,16c8.8,0 16,-7.2 16,-16s-7.2,-16 -16,-16zm10.5,19.7c-0.6,4.5 -4.8,7.5 -9.4,7c-2,-0.3 -3.7,-1.2 -4.9,-2.4c-0.7,-0.7 -0.7,-1.8 0,-2.4c0.3,-0.3 0.7,-0.4 1,-0.5c-4.4,-0.6 -7.6,-4.7 -7.1,-9c0.6,-4.5 4.8,-7.5 9.3,-7c2,0.2 3.7,1.2 5,2.4c0.7,0.7 0.7,1.8 0,2.4c-0.3,0.3 -0.7,0.4 -1,0.5c4.5,0.6 7.7,4.6 7.1,9z" fill="#ffffff">
+							</g>
+						</svg>
+						<h1 class="logo__text">Allec</h1>     		 
+				</a>
+				<!-- End Logo -->
 
-					        <div class="z-nav-inner">
-					        <ul class="z-nav__list">
-					        	<li class="z-nav__item">
-					        		<!-- Subsidiary menu toogle button -->
-					            	<span class="z-nav__toggle-sub plus"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-					        		<a class="z-nav__link z-nav__link--active" href="index.html">Home</a>
-					        		<!-- Subsidiary menu list-->
-					                <ul class="z-nav__list-secondary">
+				<!-- Navigation section -->
+				<nav class="z-nav">
+			    	<!-- Toggle for menu mobile view -->
+			        <a href="#" class="z-nav__toggle">
+			        	<span class="menu-icon"></span>
+			        	<span class="menu-text">navigation</span>
+			        	<div class="menu-head"></div>
+			        </a>
+
+			        <ul class="z-nav__list">
+			        	<li class="z-nav__item">
+			        		<!-- Subsidiary menu toogle button -->
+			            	<span class="z-nav__toggle-sub plus"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
+			        		<a class="z-nav__link" href="index.html">Home</a>
+			        		<!-- Subsidiary menu list-->
+			                <ul class="z-nav__list-secondary">
 					                    <li class="z-nav__item"><a class="z-nav__link" href="index1.html">Homepage version 1 (Revolution slider)</a></li>
 					                    <li class="z-nav__item"><a class="z-nav__link" href="index2.html">Homepage version 2 (Royal slider)</a></li>
 					                    <li class="z-nav__item"><a class="z-nav__link" href="index3.html">Homepage version 3 (FlexSlider)</a></li>
@@ -55,104 +83,104 @@
 					                    <li class="z-nav__item"><a class="z-nav__link" href="onepage-layout.html">Onepage version</a></li>
 					                    <li class="z-nav__item"><a class="z-nav__link" href="index-christmas.html">Christmas landing page</a></li>
 					                </ul>
-					                <!-- end subsidiary menu list-->
-					        	</li>
+			                <!-- end subsidiary menu list-->
+			        	</li>
 
-					        	<li class="z-nav__item">
-					        		<!-- Subsidiary menu toogle button -->
-					            	<span class="z-nav__toggle-sub plus"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-					        		<a class="z-nav__link" href="about.html">About</a>
-					        		<!-- Subsidiary menu list-->
-					                <ul class="z-nav__list-secondary">
-					                    <li class="z-nav__item"><a class="z-nav__link" href="about.html">About</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="single-employee.html">Single employee</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="careers.html">Careers</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="testimonials.html">Testimonials</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="contact1.html">Contact version 1</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="contact2.html">Contact version 2</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="contact3.html">Contact version 3</a></li>
-			                    		<li class="z-nav__item"><a class="z-nav__link" href="contact4.html">Contact version 4</a></li>
-					                </ul>
-					                <!-- end subsidiary menu list-->
-					        	</li>
-					            
-					            <li class="z-nav__item">
-					                <!-- Subsidiary menu toogle button -->
-					            	<span class="z-nav__toggle-sub plus"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-					            	<a class="z-nav__link" href="services.html">Services</a>
-					                <!-- Subsidiary menu list-->
-					                <ul class="z-nav__list-secondary">
-					                    <li class="z-nav__item"><a class="z-nav__link" href="services.html">Services version 1</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="services2.html">Services version 2</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="services3.html">Services version 3</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="single-service.html">Single service</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="pricing-tables.html">Pricing</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="support.html">Support</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="dashboard.html">Dashboard</a></li>
-					                </ul>
-					                <!-- end subsidiary menu list-->
-					            </li>
-					            
-					            
-					            <li class="z-nav__item">
-					                <!-- Subsidiary menu toogle button -->
-					            	<span class="z-nav__toggle-sub plus"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-					            	<a class="z-nav__link" href="gallery-3col.html">Portfolio</a>
-					                <!-- Subsidiary menu list-->
-					                <ul class="z-nav__list-secondary">
-					                   	<li class="z-nav__item"><a class="z-nav__link" href="gallery-2col.html">Portfolio 2 columns</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="gallery-3col.html">Portfolio 3 columns</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="gallery-4col.html">Portfolio 4 columns</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="gallery-full.html">Portfolio fullwidth</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="case-study.html">Case study</a></li>
-					                </ul>
-					                <!-- end subsidiary menu list-->
-					            </li>
-					            
-					            <li class="z-nav__item">
-					                <!-- Subsidiary menu toogle button -->
-					            	<span class="z-nav__toggle-sub plus"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-					            	<a class="z-nav__link" href="index-commerce.html">Shop</a>
-					                <!-- Subsidiary menu list-->
-					                <ul class="z-nav__list-secondary">
-					        						<li class="z-nav__item"><a class="z-nav__link" href="shop-ecwid.html">Ecwid E-commerce</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="index-commerce.html">Homepage</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="shop-grid-full.html">Catalog fullwidth grid</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="shop-list-full.html">Catalog fullwidth list</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="shop-grid.html">Catalog grid with sidebar</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="shop-list.html">Catalog list with sidebar</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="single-product.html">Single product with sidebar</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="single-product-full.html">Single product fullwidth</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="wishlist.html">Wishlist</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="orders.html">My orders</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="checkout.html">Checkout</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="shopping-cart.html">Shopping cart</a></li>
-					                </ul>
-					                <!-- end subsidiary menu list-->
-					            </li>
+			        	<li class="z-nav__item">
+			        		<!-- Subsidiary menu toogle button -->
+			            	<span class="z-nav__toggle-sub plus"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
+			        		<a class="z-nav__link" href="about.html">About</a>
+			        		<!-- Subsidiary menu list-->
+			                <ul class="z-nav__list-secondary">
+			                    <li class="z-nav__item"><a class="z-nav__link" href="about.html">About</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="single-employee.html">Single employee</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="careers.html">Careers</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="testimonials.html">Testimonials</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="contact1.html">Contact version 1</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="contact2.html">Contact version 2</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="contact3.html">Contact version 3</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="contact4.html">Contact version 4</a></li>
+			                </ul>
+			                <!-- end subsidiary menu list-->
+			        	</li>
+			            
+			            <li class="z-nav__item">
+			                <!-- Subsidiary menu toogle button -->
+			            	<span class="z-nav__toggle-sub plus"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
+			            	<a class="z-nav__link" href="services.html">Services</a>
+			                <!-- Subsidiary menu list-->
+			                <ul class="z-nav__list-secondary">
+			                    <li class="z-nav__item"><a class="z-nav__link" href="services.html">Services version 1</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="services2.html">Services version 2</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="services3.html">Services version 3</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="single-service.html">Single service</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="pricing-tables.html">Pricing</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="support.html">Support</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="dashboard.html">Dashboard</a></li>
+			                </ul>
+			                <!-- end subsidiary menu list-->
+			            </li>
+			            
+			            
+			            <li class="z-nav__item">
+			                <!-- Subsidiary menu toogle button -->
+			            	<span class="z-nav__toggle-sub plus"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
+			            	<a class="z-nav__link" href="gallery-3col.html">Portfolio</a>
+			                <!-- Subsidiary menu list-->
+			                <ul class="z-nav__list-secondary">
+			                   	<li class="z-nav__item"><a class="z-nav__link" href="gallery-2col.html">Portfolio 2 columns</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="gallery-3col.html">Portfolio 3 columns</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="gallery-4col.html">Portfolio 4 columns</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="gallery-full.html">Portfolio fullwidth</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="case-study.html">Case study</a></li>
+			                </ul>
+			                <!-- end subsidiary menu list-->
+			            </li>
+			            
+			            <li class="z-nav__item">
+			                <!-- Subsidiary menu toogle button -->
+			            	<span class="z-nav__toggle-sub plus"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
+			            	<a class="z-nav__link" href="index-commerce.html">Shop</a>
+			                <!-- Subsidiary menu list-->
+			                <ul class="z-nav__list-secondary">
+					        				<li class="z-nav__item"><a class="z-nav__link" href="shop-ecwid.html">Ecwid E-commerce</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="index-commerce.html">Homepage</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="shop-grid-full.html">Catalog fullwidth grid</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="shop-list-full.html">Catalog fullwidth list</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="shop-grid.html">Catalog grid with sidebar</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="shop-list.html">Catalog list with sidebar</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="single-product.html">Single product with sidebar</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="single-product-full.html">Single product fullwidth</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="wishlist.html">Wishlist</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="orders.html">My orders</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="checkout.html">Checkout</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="shopping-cart.html">Shopping cart</a></li>
+			                </ul>
+			                <!-- end subsidiary menu list-->
+			            </li>
 
-					            <li class="z-nav__item">
-					                <!-- Subsidiary menu toogle button -->
-					            	<span class="z-nav__toggle-sub plus"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
-					            	<a class="z-nav__link" href="blog.html">Blog</a>
-					                <!-- Subsidiary menu list-->
-					                <ul class="z-nav__list-secondary">
-					                    <li class="z-nav__item"><a class="z-nav__link" href="blog.html">Blog with sidebar</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="blog-full.html">Blog fullwidth</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="blog-masonry.html">Blog masonry</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="blog-timeline.html">Blog timeline</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="single-post.html">Single post with sidebar</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="single-post-full.html">Single post fullwidth</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="single-post-disqus.html">Single post with Disqus (with sidebar)</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="single-post-full-disqus.html">Single post with Disqus (fullwidth)</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="blog-audio.html">Blog audio</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="blog-video.html">Blog video</a></li>
-					                    <li class="z-nav__item"><a class="z-nav__link" href="blog-author.html">Post author</a></li>
-					                </ul>
-					                <!-- end subsidiary menu list-->
-					            </li>
+			            <li class="z-nav__item">
+			                <!-- Subsidiary menu toogle button -->
+			            	<span class="z-nav__toggle-sub plus"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
+			            	<a class="z-nav__link z-nav__link--active" href="blog.html">Blog</a>
+			                <!-- Subsidiary menu list-->
+			                <ul class="z-nav__list-secondary">
+			                    <li class="z-nav__item"><a class="z-nav__link" href="blog.html">Blog with sidebar</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="blog-full.html">Blog fullwidth</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="blog-masonry.html">Blog masonry</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="blog-timeline.html">Blog timeline</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="single-post.html">Single post with sidebar</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="single-post-full.html">Single post fullwidth</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="single-post-disqus.html">Single post with Disqus (with sidebar)</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="single-post-full-disqus.html">Single post with Disqus (fullwidth)</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="blog-audio.html">Blog audio</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="blog-video.html">Blog video</a></li>
+			                    <li class="z-nav__item"><a class="z-nav__link" href="blog-author.html">Post author</a></li>
+			                </ul>
+			                <!-- end subsidiary menu list-->
+			            </li>
 
-					            <li class="z-nav__item">
+			            <li class="z-nav__item">
 			                <!-- Subsidiary menu toogle button -->
 			            	<span class="z-nav__toggle-sub plus"><i class="fa fa-plus"></i><i class="fa fa-minus"></i></span>
 			            	<a class="z-nav__link" href="site-map.html">Pages</a>
@@ -231,7 +259,7 @@
 			                    </div>
 			                    
 			                    <div class="col-sm-3 col-md-2">
-			                    	<li class="z-nav__item"><a class="z-nav__link" href="shortcodes/column.html"><i class="fa fa-th-large"></i>Columns</a></li>
+			                    	<li class="z-nav__item"><a class="z-nav__link" href="shortcodes/column.html"><i class="fa fa-columns"></i>Columns</a></li>
 			                    	<li class="z-nav__item"><a class="z-nav__link" href="shortcodes/counters.html"><i class="fa fa-clock-o"></i> Counters </a></li>
 			                    	<li class="z-nav__item"><a class="z-nav__link" href="shortcodes/dividers.html"><i class="fa fa-bars"></i>Dividers</a></li>
 				                    <li class="z-nav__item"><a class="z-nav__link" href="shortcodes/forms.html"><i class="fa fa-check-square-o"></i> Forms</a></li>
@@ -262,29 +290,23 @@
 				                    <li class="z-nav__item"><a class="z-nav__link" href="shortcodes/testimonials.html"><i class="fa fa-comments"></i>Testimonials</a></li>
 				                    <li class="z-nav__item"><a class="z-nav__link" href="shortcodes/tooltips.html"><i class="fa fa-bookmark"></i>Tooltips</a></li>
 				                    <li class="z-nav__item"><a class="z-nav__link" href="shortcodes/typography.html"><i class="fa fa-font"></i> Typography</a></li>
+                        		<li class="z-nav__item"><a class="z-nav__link" href="shortcodes/modals.html"><i class="fa  fa-th-large"></i>Modal windows</a></li>
 			                    </div>
 			                    <!-- <li class="z-nav__item"><a class="z-nav__link" href="#">Shortcodes</a></li> -->
 			                </ul>
 			                <!-- end subsidiary menu list-->
 			            </li>
-					        </ul>
-					        </div><!-- end list menu inner container -->
-					        <!-- end list menu item -->
-					    </nav>
-					    <!-- end navigation section -->
-					</div> <!-- end container -->
-				</div> <!-- end fixed top block -->
+			        </ul>
+			        <!-- end list menu item -->
+			    </nav>
+			    <!-- end navigation section -->
+			</div> <!-- end container -->
 
-				<div class="large-header hero-header">
-					<div id="video-container" class="video-header-container">
-						
-					</div>
-					
-					<h1 class="main-title">All Mighty of Technology</h1>
-					<h2 class="main-title-helper">gathered in one bootstrap template</h2>
-
-					<a class="btn btn-info btn--decorated" href="http://themeforest.net/item/allec-bootstrapless-template-with-page-builder/8986248#content">Purchase Template</a>
-				</div>
-			</div>
+			<!-- Colored divider -->
+			<div class="divider-color"></div>
 			
-		</header><!-- /header -->
+			</div> <!-- end fixed top block -->
+
+			</div>
+		</header>
+		<!-- end header section -->

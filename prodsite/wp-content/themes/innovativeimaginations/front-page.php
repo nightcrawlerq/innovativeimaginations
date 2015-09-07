@@ -4,41 +4,32 @@
 			<h3 class="not-visible">Main conrainer</h3>
 
 			<div class="text-plus bottom-space--m">
-				<h3 class="text-plus__heading">Allec is Made with Love to Serve You</h3>
+				<h3 class="text-plus__heading"><?php if( get_field('plus_heading')) : the_field('plus_heading'); else: ''; endif; ?></h3>
 				<p class="text-plus__info">A Lot of Features You May Love</p>
 			</div>
 
 			<div class="row">
-				<div class="col-sm-4 hidden-xs">
-					<div class="feature">
-						<div class="feature__image feature__image--page animated fadeInUpStart start-1">
-							<img src="<?php bloginfo('template_url'); ?>/images/feature/1.png" alt="">
-						</div>
-						<h3 class="feature__heading">Allec showcase</h3>
-						<p class="feature__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in lacinia quam. Fusce quis nulla tincidunt, interdum magna vitae, viverra est. Nunc eu sodales turpis, varius viverra mauris.</p>
-					</div>
-				</div><!-- end col -->
-
-				<div class="col-sm-4 hidden-xs">
-					<div class="feature">
-						<div class="feature__image feature__image--responsive animated fadeInUpStart start-2">
-							<img src="<?php bloginfo('template_url'); ?>/images/feature/2.png" alt="">
-						</div>
-						<h3 class="feature__heading">Compatible with any device</h3>
-						<p class="feature__info">Aenean porta, elit vitae tristique consequat, nisi tellus tincidunt erat, sit amet interdum elit quam at velit. Mauris venenatis metus sed purus tincidunt placerat. </p>
-					</div>
-				</div><!-- end col -->
-
-
-				<div class="col-sm-4 hidden-xs">
-					<div class="feature">
-						<div class="feature__image feature__image--clock animated fadeInUpStart start-3">
-							<img src="<?php bloginfo('template_url'); ?>/images/feature/3.png" alt="">
-						</div>
-						<h3 class="feature__heading">Quick implementation</h3>
-						<p class="feature__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in lacinia quam. Fusce quis nulla tincidunt, interdum magna vitae, viverra est. Nunc eu sodales turpis, varius viverra mauris.</p>
-					</div>
-				</div><!-- end col -->
+			<?php $query = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 3, 'tax_query' => array(array('taxonomy'=>'post_tag','field'=>'slug','terms'=>'feature'),),
+ 'orderby' => 'menu_order','order' => 'DESC') ); ?>
+			            <?php if($query->have_posts()) : ?>
+			                <?php while ($query->have_posts()) : $query->the_post(); ?>
+			                	<div class="col-sm-4 hidden-xs">
+			                		<div class="feature">
+			                			<div class="feature__image feature__image--page animated fadeInUpStart start-1">
+			                				<?php the_post_thumbnail(); ?>
+			                			</div>
+			                			<h3 class="feature__heading"><?php the_title(); ?>
+			                			</h3>
+			                			<p class="feature__info"><?php echo substr(get_the_excerpt(), 0, 200); ?>
+			                			</p>
+			                		</div>
+			                	</div><!-- end col -->
+			            <?php endwhile; ?>
+			        <?php else : ?>
+			            <?php wp_reset_query(); ?>
+			            <h1>No Post Found</h1>
+			            <?php get_search_form( ); ?>
+			        <?php endif; ?>
 			</div><!-- end row -->
 
 			<div class="swiper-container fearure-slider">
