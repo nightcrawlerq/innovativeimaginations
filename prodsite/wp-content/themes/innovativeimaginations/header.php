@@ -35,7 +35,6 @@
 					        	<span class="menu-text">navigation</span>
 					        	<div class="menu-head"></div>
 					        </a>
-
 					        <div class="z-nav-inner">
 					        <ul class="z-nav__list">
 					        	<li class="z-nav__item">
@@ -280,10 +279,10 @@
 						
 					</div>
 					
-					<h1 class="main-title">All Mighty of Technology</h1>
-					<h2 class="main-title-helper">gathered in one bootstrap template</h2>
+					<h1 class="main-title">Creating Today's Dreams</h1>
+					<h2 class="main-title-helper">exploring tomorrow's imaginations</h2>
 
-					<a class="btn btn-info btn--decorated" href="http://themeforest.net/item/allec-bootstrapless-template-with-page-builder/8986248#content">Purchase Template</a>
+					<a class="btn btn-info btn--decorated" href="http://themeforest.net/item/allec-bootstrapless-template-with-page-builder/8986248#content">Discover More</a>
 				</div>
 			</div>
 			

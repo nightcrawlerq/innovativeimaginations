@@ -5,7 +5,7 @@
 
 			<div class="text-plus bottom-space--m">
 				<h3 class="text-plus__heading"><?php if( get_field('plus_heading')) : the_field('plus_heading'); else: ''; endif; ?></h3>
-				<p class="text-plus__info">A Lot of Features You May Love</p>
+				<p class="text-plus__info"> <?php if( get_field('sub_heading_1')) : the_field('sub_heading_1'); else: ''; endif; ?> </p>
 			</div>
 
 			<div class="row">
